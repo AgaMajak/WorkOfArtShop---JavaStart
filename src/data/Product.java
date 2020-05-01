@@ -1,3 +1,5 @@
+package data;
+
 public class Product {
     private String type;
     private String title;

@@ -1,3 +1,5 @@
+package data;
+
 public class Address {
     private String city;
     private String streetName;

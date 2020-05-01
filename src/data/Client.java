@@ -1,3 +1,5 @@
+package data;
+
 public class Client {
     private String firstName;
     private String lastName;
@@ -11,14 +13,6 @@ public class Client {
         this.companyName = companyName;
         this.address = address;
         this.isPremium = isPremium;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
     }
 
     public String getCompanyName() {
