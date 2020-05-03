@@ -2,9 +2,9 @@ import data.Address;
 import data.Company;
 import data.NaturalPerson;
 import data.Product;
-import data.logic.Document;
-import data.logic.Invoice;
-import data.logic.Receipt;
+import logic.Document;
+import logic.Invoice;
+import logic.Receipt;
 
 class ShopTest {
     public static void main(String[] args) {

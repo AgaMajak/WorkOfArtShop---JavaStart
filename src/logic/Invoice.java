@@ -1,4 +1,4 @@
-package data.logic;
+package logic;
 
 import data.Company;
 import data.Product;
