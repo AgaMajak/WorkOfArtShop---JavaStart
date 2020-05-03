@@ -11,6 +11,7 @@ public class Receipt extends Document {
         this.naturalPerson = naturalPerson;
     }
 
+    @Override
     public void printDocument() {
         if (naturalPerson.isPremium()) {
             System.out.printf("PARAGON: Zakupiony produkt: %s: Tytuł-'%s'; Autor- %s; cena przed obniżką: %.2fzł; cena po obniżce: %.2fzł.\n", getProduct().getType(), getProduct().getTitle(), getProduct().getAuthor(), getProduct().getPrice(), getProduct().getPrice() - (0.1 * getProduct().getPrice()));

@@ -11,6 +11,7 @@ public class Invoice extends Document {
         this.company = company;
     }
 
+    @Override
     public void printDocument() {
         if (company.isPremium()) {
             System.out.printf("FAKTURA: Zakupiony produkt: %s: Tytuł-'%s'; Autor- %s; cena przed obniżką: %.2fzł; cena po obniżce: %.2fzł.\nNabywca: %s, adres: %s, %s %s.\n",
