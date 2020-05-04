@@ -1,10 +1,5 @@
-import data.Address;
-import data.Company;
-import data.NaturalPerson;
-import data.Product;
+import data.*;
 import logic.Document;
-import logic.Invoice;
-import logic.Receipt;
 
 class ShopTest {
     public static void main(String[] args) {
@@ -14,16 +9,12 @@ class ShopTest {
                 new Address("Wrocław", "Pl. Wolności", "14")
         };
 
-        Company[] companies = {
+        Client[] clients = {
                 new Company(false, addresses[0], "Gwiazdkowo"),
-                new Company(true, addresses[1], "Galeria Sztuki 'Nowalijka'")
-        };
-
-        NaturalPerson[] naturalPeople = {
+                new Company(true, addresses[1], "Galeria Sztuki 'Nowalijka'"),
                 new NaturalPerson(true, "Jan", "Kowalski"),
-                new NaturalPerson(true, "Jan", "Kowalski")
+                new NaturalPerson(false, "Adam", "Nowak")
         };
-
 
         Product[] products = {
                 new Product("Obraz", "Tulipany", "Anita Jastrząb", 500),
@@ -32,18 +23,9 @@ class ShopTest {
                 new Product("Plakat", "Lonely day", "George Smith", 5000)
         };
 
-        Document[] documents = {
-                new Receipt(products[0], naturalPeople[0]),
-                new Receipt(products[1], naturalPeople[1]),
-                new Invoice(products[2], companies[0]),
-                new Invoice(products[3], companies[1]),
-        };
-
-
-        for (Document document : documents) {
-            document.printDocument();
-            System.out.println();
-        }
+        Document.printDocument(clients[0], products[3]);
+        Document.printDocument(clients[3], products[1]);
+        Document.printDocument(clients[2], products[0]);
 
     }
 

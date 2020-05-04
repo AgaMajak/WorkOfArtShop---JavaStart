@@ -4,19 +4,12 @@ import data.NaturalPerson;
 import data.Product;
 
 public class Receipt extends Document {
-    NaturalPerson naturalPerson;
 
-    public Receipt(Product product, NaturalPerson naturalPerson) {
-        super(product);
-        this.naturalPerson = naturalPerson;
-    }
-
-    @Override
-    public void printDocument() {
+    public void printReceipt(NaturalPerson naturalPerson, Product product) {
         if (naturalPerson.isPremium()) {
-            System.out.printf("PARAGON: Zakupiony produkt: %s: Tytuł-'%s'; Autor- %s; cena przed obniżką: %.2fzł; cena po obniżce: %.2fzł.\n", getProduct().getType(), getProduct().getTitle(), getProduct().getAuthor(), getProduct().getPrice(), getProduct().getPrice() - (0.1 * getProduct().getPrice()));
+            System.out.printf("PARAGON: Zakupiony produkt: %s: Tytuł-'%s'; Autor- %s; cena przed obniżką: %.2fzł; cena po obniżce: %.2fzł.\n", product.getType(), product.getTitle(), product.getAuthor(), product.getPrice(), product.getPrice() - (0.1 * product.getPrice()));
         } else
-            System.out.printf("PARAGON: Zakupiony produkt: %s: Tytuł-'%s'; Autor- %s; cena: %.2fzł.\n", getProduct().getType(), getProduct().getTitle(), getProduct().getAuthor(), getProduct().getPrice());
+            System.out.printf("PARAGON: Zakupiony produkt: %s: Tytuł-'%s'; Autor- %s; cena: %.2fzł.\n", product.getType(), product.getTitle(), product.getAuthor(), product.getPrice());
     }
 
 }
